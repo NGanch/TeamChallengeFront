@@ -41,15 +41,15 @@ export type MainProductState = {
 export type DevicesState = {
   id: string;
   title: string;
-  color: string;
+  // color?: string;
   mainPhotoUri: string;
   review: {
-    rating: number;
-    countOfVotes: number;
+    rating: string;
+    countOfVotes: string;
   };
-  price: number;
-  discount: number;
-  devicesWithSameColor: [];
+  price: string;
+  discount: string;
+  deal: string;
 };
 
 export type initialStateCatalogueType = {

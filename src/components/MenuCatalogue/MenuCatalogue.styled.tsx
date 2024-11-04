@@ -2,6 +2,8 @@ import styled from "styled-components";
 import ReactSelect from "react-select";
 import transition from "../../utils/transition";
 
+export const MenuCatalogueContainer = styled.div``;
+
 export const StyledSelect = styled(ReactSelect)`
   & .Select__control {
     width: 100%;
@@ -15,7 +17,7 @@ export const StyledSelect = styled(ReactSelect)`
       // transition: transform ;
       width: 24px;
       height: 24px;
-      color: #AEA8B7;
+      color: #aea8b7;
     }
 
     &.Select__control--menu-is-open {
@@ -92,7 +94,7 @@ export const StyledSelect = styled(ReactSelect)`
     margin: 0;
     margin-top: 4px;
     border-radius: 24px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
   & .Select__menu-list {
@@ -124,13 +126,13 @@ export const StyledSelect = styled(ReactSelect)`
     cursor: pointer;
     &:hover,
     &:focus {
-      color: #FFFFFF;
+      color: #ffffff;
       // background-color: #e0d4f7;
       background-color: #6142db;
     }
 
     &:active {
-      color: #FFFFFF;
+      color: #ffffff;
       background-color: #e0d4f7;
     }
 
@@ -141,26 +143,30 @@ export const StyledSelect = styled(ReactSelect)`
   }
 `;
 
-export const DIV = styled.div`
-  display: flex;
-  gap: 21px;
-`;
-
 export const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
-  padding: 20px 0;
-  width: 350px;
+
+  width: 218px;
   height: 360px;
-  border-radius: 0px 12px;
-  border-right: 1px solid ${({ theme }) => theme.TritiaryLightGray};
+
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    padding: 20px 0;
+    width: 350px;
+    height: 360px;
+    border-radius: 0px 12px;
+    border-right: 1px solid #e0e4f0;
+  }
 `;
 
 export const MenuItem = styled.li`
   display: flex;
-  gap: 20px;
+  gap: 4px;
   align-items: center;
-  padding: 0px 20px;
+  padding: 4px 0px;
 
   transition: background-color ${transition}, color ${transition};
 
@@ -170,30 +176,36 @@ export const MenuItem = styled.li`
     background-color: ${({ theme }) => theme.TritiaryLightGray};
   }
 
-  //   @media screen and (min-width: 768px) {
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
 
-  //   }
-
-  //   @media screen and (min-width: 1440px) {
-
-  //   }
+  @media (min-width: 769px) and (max-width: 1440px) {
+    padding: 8px 0px;
+    gap: 20px;
+  }
 `;
 
 export const TextDiv = styled.div`
   display: flex;
-  gap: 20px;
+
   align-items: center;
-  padding: 8px 0px;
+  gap: 24px;
+
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    gap: 20px;
+  }
 `;
 
 export const MenuTitle = styled.h3`
-  width: 200px;
+  width: 148px;
   color: ${({ theme }) => theme.PrimaryBlack};
   font-family: Inter;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0em;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
   text-align: left;
 
   transition: color ${transition};
@@ -201,6 +213,16 @@ export const MenuTitle = styled.h3`
   &:focus,
   &:hover {
     color: ${({ theme }) => theme.PrimaryBrightPurple};
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    width: 200px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
   }
 `;
 export const MenuButton = styled.button`

@@ -1,6 +1,6 @@
 import OtherModal from "../../shared/Modal/OtherModal";
 
-import { ShowAllCatalogue } from "../../assets/Icons";
+import { ShowAllCatalogue } from "../../assets/icon/Icons";
 import {
   CatalogueList,
   CatalogueBrandTitle,

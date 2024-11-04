@@ -2,10 +2,10 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
 
-import { SliderRight, SliderLeft } from "../../assets/Icons";
-import SliderOne from "../../assets/slider1.png";
-import SliderTwo from "../../assets/slider2.png";
-import SliderTree from "../../assets/slider3.png";
+import { SliderRight, SliderLeft } from "../../assets/icon/Icons";
+import SliderOne from "../../assets/img/slider1.png";
+import SliderTwo from "../../assets/img/slider2.png";
+import SliderTree from "../../assets/img/slider3.png";
 // import slider from "../../data/slidernews.json";
 import {
   SliderContainer,
@@ -14,6 +14,7 @@ import {
   SliderTextDiv,
   SliderTitle,
   SliderDiscText,
+  SliderPriceWrapp,
   SliderPriceText,
   SliderPriceButton,
   ButtonLeft,
@@ -36,8 +37,10 @@ const Slider = () => {
           <SliderTextDiv>
             <SliderTitle>Samsung Galaxy Fold5</SliderTitle>
             <SliderDiscText>78 999 ₴</SliderDiscText>
-            <SliderPriceText>72 699 ₴</SliderPriceText>
-            <SliderPriceButton>-8%</SliderPriceButton>
+            <SliderPriceWrapp>
+              <SliderPriceText>72 699 ₴</SliderPriceText>
+              <SliderPriceButton>-8%</SliderPriceButton>
+            </SliderPriceWrapp>
           </SliderTextDiv>
 
           <SliderImg src={SliderOne} />
@@ -52,8 +55,10 @@ const Slider = () => {
           <SliderTextDiv>
             <SliderTitle>Samsung Galaxy Gold6</SliderTitle>
             <SliderDiscText>78 999 ₴</SliderDiscText>
-            <SliderPriceText>72 699 ₴</SliderPriceText>
-            <SliderPriceButton>-8%</SliderPriceButton>
+            <SliderPriceWrapp>
+              <SliderPriceText>72 699 ₴</SliderPriceText>
+              <SliderPriceButton>-8%</SliderPriceButton>
+            </SliderPriceWrapp>
           </SliderTextDiv>
 
           <SliderImg src={SliderTwo} />
@@ -68,8 +73,10 @@ const Slider = () => {
           <SliderTextDiv>
             <SliderTitle>Samsung Galaxy Black8</SliderTitle>
             <SliderDiscText>78 999 ₴</SliderDiscText>
-            <SliderPriceText>72 699 ₴</SliderPriceText>
-            <SliderPriceButton>-8%</SliderPriceButton>
+            <SliderPriceWrapp>
+              <SliderPriceText>72 699 ₴</SliderPriceText>
+              <SliderPriceButton>-8%</SliderPriceButton>
+            </SliderPriceWrapp>
           </SliderTextDiv>
 
           <SliderImg src={SliderTree} />

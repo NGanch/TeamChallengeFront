@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { addProductToCart } from "../../../redux/products/cartReducer";
 import CartModal from "../../CartModal/CartModal";
-import { Cart } from "../../../assets/Icons.tsx";
+import { Cart } from "../../../assets/icon/Icons.tsx";
 import {
   CardItem,
   MainProdImageDiv,
@@ -27,7 +27,7 @@ import {
 } from "../../../redux/types/initialEntity";
 import { useAppDispatch } from "../../../redux/hooks";
 import ReviewCardSpecifications from "./ReviewCardSpecifications.tsx";
-import StarRating from "../../StarRating/StarRating.tsx";
+import StarRating from "../../../shared/StarRating/StarRating.tsx";
 
 type Props = {
   id: string | undefined;

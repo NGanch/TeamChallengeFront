@@ -3,7 +3,7 @@ import { GridWrap, FirstColumn, SecondColumn, GridContainer, GridContainerTitle,
 import {
   DeviceIdState,
 } from "../../../redux/types/initialEntity";
-import { ReadMore } from "../../../assets/Icons";
+import { ReadMore } from "../../../assets/icon/Icons";
 import { useState } from "react";
 type Props = {
   device: DeviceIdState | undefined;

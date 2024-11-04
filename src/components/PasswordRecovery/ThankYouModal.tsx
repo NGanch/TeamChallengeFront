@@ -1,4 +1,4 @@
-import PageTitle from "../../shared/PageTitle/PageTitle";
+import PageTitle from "../../shared/SectionTitle/SectionTitle";
 import {
   SignWrapper,
   SignText,
