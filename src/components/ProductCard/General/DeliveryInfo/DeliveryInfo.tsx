@@ -20,7 +20,7 @@ import {
   GarantShield,
   GarantCar,
   MyWallet,
-} from "@/assets/Icons";
+} from "@/assets/icon/Icons";
 
 export const DeliveryInfo = () => {
   const style = {

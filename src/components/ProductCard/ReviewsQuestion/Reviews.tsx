@@ -5,8 +5,8 @@ import {
   IconThumbsDown,
   IconThumbsUp,
   IconThumbsVector,
-} from "../../../assets/Icons";
-import StarRating from "../../StarRating/StarRating";
+} from "../../../assets/icon/Icons";
+import StarRating from "../../../shared/StarRating/StarRating";
 import { Review } from "./ReviewsQuestion";
 import {
   ReplyUserButton,

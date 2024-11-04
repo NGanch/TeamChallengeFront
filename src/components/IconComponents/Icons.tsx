@@ -9,7 +9,7 @@ import {
   IconWashing,
   IconPercentage,
   IconRight,
-} from "../../assets/Icons";
+} from "../../assets/icon/Icons";
 
 import { forwardRef } from "react";
 

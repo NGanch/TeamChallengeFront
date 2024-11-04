@@ -1,4 +1,4 @@
-import PageTitle from "../../../shared/PageTitle/PageTitle";
+import PageTitle from "../../../shared/SectionTitle/SectionTitle";
 import { Section } from "../../Container/Container.styled";
 
 import Offer1 from "../../../assets/offer-1.png";
@@ -7,15 +7,17 @@ import Offer3 from "../../../assets/offer-3.png";
 import Offer4 from "../../../assets/offer-4.png";
 
 import {
+  CurrentOfferContainer,
   CurrentOfferList,
   CurrentOfferItem,
   CurrentOfferDiv,
   CurrentOfferTitle,
+  CurrentOfferWrapp,
   CurrentOfferPrice,
   CurrentOfferDisc,
   CurrentOfferText,
-  // CurrentOfferImgDiv,
-  // CurrentOfferImg
+  CurrentOfferImgDiv,
+  CurrentOfferImg,
 } from "./CurrentOffer.styled";
 
 import { useTranslation } from "react-i18next";
@@ -24,64 +26,79 @@ const CurrentOffer = () => {
   const { t } = useTranslation();
   return (
     <Section>
-      <PageTitle title={"Current offers"} />
-      <CurrentOfferList>
-        <CurrentOfferItem color={"#92c1e9"}>
-          <CurrentOfferDiv>
-            <div>
+      <CurrentOfferContainer>
+        <PageTitle title={"Current offers"} />
+        <CurrentOfferList>
+          <CurrentOfferItem color={"#92c1e9"}>
+            <CurrentOfferDiv>
               <CurrentOfferTitle>{t("Product of the day")}</CurrentOfferTitle>
-              <CurrentOfferPrice>7 599 ₴</CurrentOfferPrice>
-              <CurrentOfferDisc>10 599 ₴</CurrentOfferDisc>
-            </div>
 
-            <CurrentOfferText>
-              {t("Marshall Stockwell II Portable Speaker Black")}
-            </CurrentOfferText>
-          </CurrentOfferDiv>
-          <>
-            <img src={Offer1} width="90" height="124" />
-          </>
-        </CurrentOfferItem>
-        <CurrentOfferItem color={"#FFF66A"}>
-          <CurrentOfferDiv>
-            <div>
+              <CurrentOfferWrapp>
+                <CurrentOfferPrice>7 599 ₴</CurrentOfferPrice>
+                <CurrentOfferDisc>10 599 ₴</CurrentOfferDisc>
+              </CurrentOfferWrapp>
+
+              <CurrentOfferText>
+                {t("Marshall Stockwell II Portable Speaker Black")}
+              </CurrentOfferText>
+            </CurrentOfferDiv>
+
+            <CurrentOfferImgDiv>
+              <CurrentOfferImg src={Offer1} />
+            </CurrentOfferImgDiv>
+          </CurrentOfferItem>
+
+          <CurrentOfferItem color={"#FFF66A"}>
+            <CurrentOfferDiv>
               <CurrentOfferTitle>{t("Sales")}</CurrentOfferTitle>
-              <CurrentOfferPrice>{t("from")} 990 ₴</CurrentOfferPrice>
-            </div>
+              <CurrentOfferWrapp>
+                <CurrentOfferPrice>{t("from")} 990 ₴</CurrentOfferPrice>
+              </CurrentOfferWrapp>
 
-            <CurrentOfferText>{t("Smart Watch GOGPS ME K11")}</CurrentOfferText>
-          </CurrentOfferDiv>
+              <CurrentOfferText>
+                {t("Smart Watch GOGPS ME K11")}
+              </CurrentOfferText>
+            </CurrentOfferDiv>
 
-          <img src={Offer2} width="110" height="102" />
-        </CurrentOfferItem>
-        <CurrentOfferItem color={"#F2994A"}>
-          <CurrentOfferDiv>
-            <div>
+            <CurrentOfferImgDiv>
+              <CurrentOfferImg src={Offer2} />
+            </CurrentOfferImgDiv>
+          </CurrentOfferItem>
+
+          <CurrentOfferItem color={"#F2994A"}>
+            <CurrentOfferDiv>
               <CurrentOfferTitle>{t("Discounts")}</CurrentOfferTitle>
-              <CurrentOfferPrice>20 990 ₴</CurrentOfferPrice>
-              <CurrentOfferDisc>27 990 ₴</CurrentOfferDisc>
-            </div>
+              <CurrentOfferWrapp>
+                <CurrentOfferPrice>20 990 ₴</CurrentOfferPrice>
+                <CurrentOfferDisc>27 990 ₴</CurrentOfferDisc>
+              </CurrentOfferWrapp>
 
-            <CurrentOfferText>{t("Laptop HP 15")}</CurrentOfferText>
-          </CurrentOfferDiv>
+              <CurrentOfferText>{t("Laptop HP 15")}</CurrentOfferText>
+            </CurrentOfferDiv>
 
-          <img src={Offer3} width="113" height="95" />
-        </CurrentOfferItem>
-        <CurrentOfferItem color={"#CBC2F2"}>
-          <CurrentOfferDiv>
-            <div>
+            <CurrentOfferImgDiv>
+              <CurrentOfferImg src={Offer3} />
+            </CurrentOfferImgDiv>
+          </CurrentOfferItem>
+
+          <CurrentOfferItem color={"#CBC2F2"}>
+            <CurrentOfferDiv>
               <CurrentOfferTitle>{t("Top offers")}</CurrentOfferTitle>
-              <CurrentOfferPrice>{t("from")} 1 599 ₴</CurrentOfferPrice>
-            </div>
+              <CurrentOfferWrapp>
+                <CurrentOfferPrice>{t("from")} 1 599 ₴</CurrentOfferPrice>
+              </CurrentOfferWrapp>
 
-            <CurrentOfferText>
-              {t("ZTE BLADE L9 1/32GB Dual Sim Gray")}
-            </CurrentOfferText>
-          </CurrentOfferDiv>
+              <CurrentOfferText>
+                {t("ZTE BLADE L9 1/32GB Dual Sim Gray")}
+              </CurrentOfferText>
+            </CurrentOfferDiv>
 
-          <img src={Offer4} width="78" height="102" />
-        </CurrentOfferItem>
-      </CurrentOfferList>
+            <CurrentOfferImgDiv>
+              <CurrentOfferImg src={Offer4} />
+            </CurrentOfferImgDiv>
+          </CurrentOfferItem>
+        </CurrentOfferList>
+      </CurrentOfferContainer>
     </Section>
   );
 };

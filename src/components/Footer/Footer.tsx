@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Formik, Field } from "formik";
-import "./footer.scss";
+import { Formik } from "formik";
+
 import {
   Logo,
   FooterInstagram,
   FooterTwitter,
   FooterFacebook,
   IconRight,
-} from "../../assets/Icons";
+} from "../../assets/icon/Icons";
 import { Container } from "../Container/Container.styled";
 
 import { useTranslation } from "react-i18next";
@@ -18,8 +17,31 @@ import * as Yup from "yup";
 // import { subscribeEmail } from '../../redux/auth/auth-operation';
 // import { AuthUserState } from '../../redux/types/initialEntity';
 // import FormError from "../FormError/FormError";
-import { FooterMail } from "../../assets/Icons";
-
+import { FooterMail } from "../../assets/icon/Icons";
+import {
+  FooterWrapper,
+  FooterContainer,
+  InfoContainer,
+  InfoText,
+  InfoIconList,
+  InformationContainer,
+  InformationWrapper,
+  InformationListTitles,
+  InformationButton,
+  InformationList,
+  InformationItem,
+  SubscribeContainer,
+  SubscribeForm,
+  SubscribeWrapperText,
+  SubscribeTitle,
+  SubscribeText,
+  SubscribeField,
+  SubscribeButton,
+  PolicyContainer,
+  PolicyText,
+  PolicyList,
+  PolicyLink,
+} from "./Footer.styled";
 
 interface MyFormValues {
   email: string;
@@ -54,14 +76,14 @@ const Footer = () => {
   //   resetForm();
   // };
   return (
-    <footer className="footer">
+    <FooterWrapper>
       <Container>
-        <div className="footer-container">
-          <div className="info-container">
+        <FooterContainer>
+          <InfoContainer>
             <div>
               <Logo />
-              <p className="footer-text">{t("Simplify Your Tech Journey")}</p>
-              <ul className="footer-icon-list">
+              <InfoText>{t("Simplify Your Tech Journey")}</InfoText>
+              <InfoIconList>
                 <li>
                   <FooterInstagram />
                 </li>
@@ -71,77 +93,68 @@ const Footer = () => {
                 <li>
                   <FooterFacebook />
                 </li>
-              </ul>
+              </InfoIconList>
             </div>
 
-            <div className="footer-information-wrapper">
+            <InformationContainer>
               <div>
-                <div className="information-container">
-                  <h4 className="information-list-title">TechEase</h4>
-                  <button
+                <InformationWrapper>
+                  <InformationListTitles>TechEase</InformationListTitles>
+                  <InformationButton
                     className={isTechEaseOpen ? "open" : ""}
                     onClick={() => setTechEaseOpen(!isTechEaseOpen)}
                   >
                     <IconRight />
-                  </button>
-                </div>
-                <ul
-                  className={`information-list ${
-                    isTechEaseOpen ? "open" : "closed"
-                  }`}
+                  </InformationButton>
+                </InformationWrapper>
+                <InformationList
+                  className={`${isTechEaseOpen ? "open" : "closed"}`}
                 >
-                  <li className="information-item">{t("About")}</li>
-                  <li className="information-item">{t("Vacancies")}</li>
-                  <li className="information-item">{t("Customer Support")}</li>
-                </ul>
+                  <InformationItem>{t("About")}</InformationItem>
+                  <InformationItem>{t("Vacancies")}</InformationItem>
+                  <InformationItem>{t("Customer Support")}</InformationItem>
+                </InformationList>
               </div>
 
               <div>
-                <div className="information-container">
-                  <h4 className="information-list-title">{t("Information")}</h4>
-                  <button
+                <InformationWrapper>
+                  <InformationListTitles>
+                    {t("Information")}
+                  </InformationListTitles>
+                  <InformationButton
                     className={isInfoOpen ? "open" : ""}
                     onClick={() => setInfoOpen(!isInfoOpen)}
                   >
                     <IconRight />
-                  </button>
-                </div>
-                <ul
-                  className={`information-list ${
-                    isInfoOpen ? "open" : "closed"
-                  }`}
+                  </InformationButton>
+                </InformationWrapper>
+                <InformationList
+                  className={`${isInfoOpen ? "open" : "closed"}`}
                 >
-                  <li className="information-item">
-                    {t("Delivery and payment")}
-                  </li>
-                  <li className="information-item">
-                    {t("Warranty and service")}
-                  </li>
-                  <li className="information-item">
-                    {t("Return and exchange")}
-                  </li>
-                  <li className="information-item">{t("Credit")}</li>
-                </ul>
+                  <InformationItem>{t("Delivery and payment")}</InformationItem>
+                  <InformationItem>{t("Warranty and service")}</InformationItem>
+                  <InformationItem>{t("Return and exchange")}</InformationItem>
+                  <InformationItem>{t("Credit")}</InformationItem>
+                </InformationList>
               </div>
-            </div>
+            </InformationContainer>
 
             {/* <FooterSab /> */}
-            <div className="sub-div">
+            <SubscribeContainer>
               <Formik
                 initialValues={initialValues}
                 validationSchema={schema}
                 onSubmit={handleSubmit}
               >
                 {({ values, errors, touched }) => (
-                  <form className="sub-form">
-                    <div className="sub-div-text">
-                      <h3 className="sub-title">
+                  <SubscribeForm>
+                    <SubscribeWrapperText>
+                      <SubscribeTitle>
                         Subscribe to our newsletter!
-                      </h3>
-                      <p className="sub-text">We will not bother you :)</p>
-                    </div>
-                    <Field
-                      className="sub-input"
+                      </SubscribeTitle>
+                      <SubscribeText>We will not bother you :)</SubscribeText>
+                    </SubscribeWrapperText>
+                    <SubscribeField
                       type="email"
                       name="email"
                       placeholder="example@email.com"
@@ -149,35 +162,31 @@ const Footer = () => {
                       success={values.email && !errors.email ? "true" : "false"}
                     />
                     {/* <FormError name="email" /> */}
-                    <button type="submit" className="button">
+                    <SubscribeButton type="submit">
                       <FooterMail />
                       Subscribe
-                    </button>
-                  </form>
+                    </SubscribeButton>
+                  </SubscribeForm>
                 )}
               </Formik>
-            </div>
+            </SubscribeContainer>
             {/* <FooterSab /> */}
-          </div>
+          </InfoContainer>
 
-          <div className="policy-wrapper">
-            <p className="policy-text">{t("TechEase")}</p>
-            <ul className="policy-list">
-              <li className="policy-item">
-                <NavLink className="policy-link" to={`/cookie`}>
-                  {t("Cookie Policy")}
-                </NavLink>
+          <PolicyContainer>
+            <PolicyText>{t("TechEase")}</PolicyText>
+            <PolicyList>
+              <li>
+                <PolicyLink to={`/cookie`}>{t("Cookie Policy")}</PolicyLink>
               </li>
-              <li className="policy-item">
-                <NavLink className="policy-link" to={`/privacy`}>
-                  {t("Privacy Policy")}
-                </NavLink>
+              <li>
+                <PolicyLink to={`/privacy`}>{t("Privacy Policy")}</PolicyLink>
               </li>
-            </ul>
-          </div>
-        </div>
+            </PolicyList>
+          </PolicyContainer>
+        </FooterContainer>
       </Container>
-    </footer>
+    </FooterWrapper>
   );
 };
 export default Footer;

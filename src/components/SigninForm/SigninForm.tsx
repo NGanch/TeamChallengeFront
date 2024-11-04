@@ -11,7 +11,7 @@ import  { useAppDispatch } from '../../redux/hooks';
 import { toast } from 'react-toastify';
 
 import FormError from "../FormError/FormError";
-import PageTitle from "../../shared/PageTitle/PageTitle";
+import PageTitle from "../../shared/SectionTitle/SectionTitle";
 import ModalIcons from "../ModalIcons/ModalIcons";
 
 import {

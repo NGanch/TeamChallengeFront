@@ -25,3 +25,26 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+Для того щоб виглядати професіоналом при роботі зі styled-components, 
+важливо використовувати зрозумілі, семантичні імена для ваших компонентів,
+ які відображають їхню роль або контекст на сторінці. Ось кілька 
+ рекомендацій щодо іменування:
+
+Семантичність імен:
+
+Використовуйте назви, що описують функцію елемента. Наприклад, замість Div назвіть компонент Container, Wrapper або Section залежно від його ролі.
+Для заголовків: Title, Heading, SectionTitle, PageTitle.
+Для текстових елементів: Text, Paragraph, Description, Caption.
+Уникання технічних термінів:
+
+Не використовуйте імен, які безпосередньо відображають HTML-тег (на кшталт Div, P, H1), краще використовувати значення на рівні контенту.
+Компоненти з контекстом:
+
+Якщо компонент специфічний для певної частини сайту (наприклад, інтернет-магазину), уточнюйте його роль. Наприклад:
+ProductCard, ProductDescription, ProductImage для сторінок товарів.
+CartItem, CartTotal, CheckoutButton для корзини покупок.
+Модифікатори та стани:
+
+Якщо компонент змінює стан (наприклад, активність кнопки чи відкриття/закриття списку), можна використовувати назви, які включають стан: ButtonActive, MenuOpen.
+З такими іменами код виглядатиме чистіше, і легше буде орієнтуватися в структурі.

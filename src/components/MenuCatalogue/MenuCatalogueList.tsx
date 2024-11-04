@@ -1,21 +1,22 @@
-// import MENU_CATEGORIES from "../../data/menucatalogue.json";
-// import { Icons } from "../IconComponents/Icons";
+import MENU_CATEGORIES from "../../data/menucatalogue.json";
+import { Icons } from "../IconComponents/Icons";
 
-import CatalogueModal from "./CatalogueModal";
+import CatalogueModal from "../ListofModals/CatalogueModal";
+import { GoodsType } from "../ListofModals/CatalogueModal";
 
 import {
+  MenuCatalogueContainer,
   MenuList,
   MenuItem,
   TextDiv,
   MenuTitle,
-  // MenuButton,
+  MenuButton,
 } from "./MenuCatalogue.styled";
+
 import { getCatalogue } from "../../redux/catalogue/catalogue-operation";
 import { CatalogueState } from "../../redux/types/initialEntity";
 import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
-
-import { GoodsType } from "./CatalogueModal";
 
 const MenuCatalogueList = () => {
   const dispatch = useAppDispatch();
@@ -43,16 +44,16 @@ const MenuCatalogueList = () => {
         ?.groupSpecifications as GoodsType)) ||
     [];
   return (
-    <div>
+    <MenuCatalogueContainer>
       <MenuList>
-        {catalogue.map(({ id, title }) => (
+        {MENU_CATEGORIES.map(({ id, title, right, icon }) => (
           <MenuItem key={id} onClick={() => handleToggleTitle(id)}>
-            {/* <Icons name={icon} /> */}
+            <Icons name={icon} />
             <TextDiv>
               <MenuTitle>{title}</MenuTitle>
-              {/* <MenuButton>
+              <MenuButton>
                 <Icons name={right} />
-              </MenuButton> */}
+              </MenuButton>
             </TextDiv>
           </MenuItem>
         ))}
@@ -64,7 +65,7 @@ const MenuCatalogueList = () => {
           groupSpecifications={goodsData}
         />
       ) : null}
-    </div>
+    </MenuCatalogueContainer>
   );
 };
 

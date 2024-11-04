@@ -15,7 +15,7 @@ import {
   IconThumbsUp,
   IconThumbsVector,
   TagReply,
-} from "../../../assets/Icons";
+} from "../../../assets/icon/Icons";
 type Props = {
   // id: string | undefined;
   questions: Question[] | null;

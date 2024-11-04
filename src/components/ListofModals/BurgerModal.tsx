@@ -1,5 +1,4 @@
 import OtherModal from "../../shared/Modal/OtherModal";
-import MenuCatalogueList from "./MenuCatalogueList";
 
 import { ModalProps } from '../../types/modalsEntity';
 
@@ -16,17 +15,15 @@ const style = {
   height: "430px",
 };
 
-const HeaderCatalogueModal = ({ isOpen, handleClose }: ModalProps) => {
-  // const visibles = false;
+const BurgerModal = ({ isOpen, handleClose }: ModalProps) => {
   return (
     <OtherModal
       isOpen={isOpen}
       handleClose={handleClose}
       style={style}
-      // visible={visibles}
     >
-      <MenuCatalogueList />
+     <p>hello</p>
     </OtherModal>
   );
 };
-export default HeaderCatalogueModal;
+export default BurgerModal;

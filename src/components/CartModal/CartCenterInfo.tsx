@@ -1,5 +1,5 @@
 import cart from "../../data/Cartcredit.json";
-import { Coins, Cart } from "../../assets/Icons";
+import { Coins, Cart } from "../../assets/icon/Icons";
 
 import {
   CartListCenter,

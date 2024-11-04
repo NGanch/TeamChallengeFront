@@ -1,6 +1,6 @@
 import { signInWithGooglePopup } from "../../utils/firebase.utils";
 
-import { Google, Facebook } from "../../assets/Icons";
+import { Google, Facebook } from "../../assets/icon/Icons";
 
 import { ModalIconList, ModalIconButton } from "./ModalIcons.styled";
 

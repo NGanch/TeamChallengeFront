@@ -1,6 +1,6 @@
 import cart from "../../data/cart.json";
 
-import { Like, Compare, NotLike } from "../../assets/Icons";
+import { Like, Compare, NotLike } from "../../assets/icon/Icons";
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { toggleLike } from "../../redux/products/likeReducer";

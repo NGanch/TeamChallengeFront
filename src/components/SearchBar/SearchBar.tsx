@@ -1,4 +1,4 @@
-import { Search } from "../../assets/Icons";
+import { Search } from "../../assets/icon/Icons";
 import SearchInput from "./SearchInput/SearchInput";
 // import { useState } from "react";
 // import SearchResultsList from "./SearchResults/SearchResultsList";
@@ -6,7 +6,7 @@ import styled from "styled-components";
 
  const SearchWrapper = styled.div`
    display: flex;
-   width: 447px;
+   width: 100%;
    padding: 9px 16px;
    justify-content: flex-start;
    align-items: center;

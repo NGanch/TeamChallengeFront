@@ -3,7 +3,7 @@ import * as Yup from "yup";
 // import { useState } from "react";
 
 import FormError from "../FormError/FormError";
-import PageTitle from "../../shared/PageTitle/PageTitle";
+import PageTitle from "../../shared/SectionTitle/SectionTitle";
 
 import {
   SignWrapper,

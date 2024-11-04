@@ -1,5 +1,5 @@
 import { Container } from '../../components/Container/Container.styled';
-import PageTitle from '../../shared/PageTitle/PageTitle';
+import PageTitle from '../../shared/SectionTitle/SectionTitle';
 import { MdOutlinePolicy } from 'react-icons/md';
 import { CookiePolicyNameInput } from '../CookiePolicy/CookiePolicy.styled';
 import {

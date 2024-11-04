@@ -1,6 +1,18 @@
 import { Box } from "@mui/material";
+import Fade from "@mui/material/Fade";
 import styled from "styled-components";
 import transition from "../../utils/transition";
+
+export const StyledFade = styled(Fade)`
+  margin-bottom: 12px;
+  @media (min-width: 481px) and (max-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+   display: none;
+  }
+`;
 
 export const StyledBox = styled(Box)`
   position: absolute;

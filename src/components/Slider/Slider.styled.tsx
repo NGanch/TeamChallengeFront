@@ -26,6 +26,11 @@ export const SliderContainer = styled(Swiper)`
   width: 899px;
   //   width: 100vw;
   border-radius: 12px;
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+  }
 `;
 
 export const SliderItem = styled(SwiperSlide)`
@@ -34,43 +39,133 @@ export const SliderItem = styled(SwiperSlide)`
 `;
 
 export const SliderImg = styled.img`
+  width: 217px;
+  height: 102px;
   position: absolute;
   top: 10%;
   left: 33%;
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 410px;
+    height: 203px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    width: 417px;
+    height: 222px;
+    top: 19%;
+    left: 42%;
+  }
 `;
 
 export const SliderTextDiv = styled.div`
-  padding-top: 108px;
-  padding-left: 110px;
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  @media (min-width: 481px) and (max-width: 768px) {
+    padding-top: 71px;
+    padding-left: 54px;
+    padding-bottom: 72px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    padding-top: 108px;
+    padding-left: 110px;
+  }
 `;
 
 export const SliderTitle = styled.h1`
-  width: 225px;
+  margin-bottom: 8px;
+  width: 113px;
   color: ${({ theme }) => theme.PrimaryWhite};
+
   font-family: Inter;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 44px;
-  letter-spacing: 0em;
+  line-height: 22px;
   text-align: left;
+  @media (min-width: 481px) and (max-width: 768px) {
+    margin-bottom: 18px;
+    width: 198px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    margin-bottom: 8px;
+    width: 225px;
+    font-family: Inter;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 `;
 export const SliderDiscText = styled.p`
   color: ${({ theme }) => theme.TritiaryLightGray};
   font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
+  font-size: 10.39px;
   font-weight: 400;
-  line-height: 22px; /* 157.143% */
+  line-height: 16.32px;
+  text-align: left;
+
   text-decoration-line: strikethrough;
+  @media (min-width: 481px) and (max-width: 768px) {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+  }
+`;
+
+export const SliderPriceWrapp = styled.div`
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+  }
 `;
 
 export const SliderPriceText = styled.p`
   color: ${({ theme }) => theme.PrimaryWhite};
+
   font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 26px; /* 130% */
+  line-height: 20px;
+  text-align: left;
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    //styleName: Tablet/H4;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px; /* 130% */
+  }
 `;
 
 export const SliderPriceButton = styled.button`
@@ -83,12 +178,21 @@ export const SliderPriceButton = styled.button`
   border: none;
   background: ${({ theme }) => theme.SecondaryExoticPink};
   color: ${({ theme }) => theme.PrimaryWhite};
-  text-align: center;
   font-family: Inter;
-  font-size: 12px;
-  font-style: normal;
+  font-size: 8.9px;
   font-weight: 400;
-  line-height: 18px; /* 150% */
+  line-height: 13.35px;
+  text-align: center;
+
+  @media (min-width: 481px) and (max-width: 768px) {
+  }
+
+  @media (min-width: 769px) and (max-width: 1440px) {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 150% */
+  }
 `;
 export const ButtonLeft = styled.button`
   position: absolute;

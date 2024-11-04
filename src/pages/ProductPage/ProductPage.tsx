@@ -6,7 +6,7 @@ import { useProduct } from "@/redux/hooks/usePeoduct";
 import { useLocation, useParams } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import Loader from "@/components/Loader/Loader";
-import PageTitle from "@/shared/PageTitle/PageTitle";
+import PageTitle from "@/shared/SectionTitle/SectionTitle";
 import PhoneCardList from "@/components/PhoneCardList/PhoneCardList";
 import {
   MainSection,
